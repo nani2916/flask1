@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Existing Pets</title>
+    <link rel="icon" href="../static/assets/icon.png">
+
     <link rel="stylesheet" href="../static/style.css"> <!-- Correct path to style.css -->
 </head>
 <body>
     <div class="hero">
         <nav>
-            Pet List
+            <a href="home.html"><img class="logo" src="../static/assets/logo.jpg"></a>
             <ul>
                 <li><a href="{{ url_for('index') }}">Home</a></li>
                 <li><a href="{{ url_for('pet_list') }}">View Existing Pets</a></li>
@@ -19,7 +21,9 @@
     </div>
     <div class="signup">
     <div class="container">
-        <h2>Existing Pets</h2>
+        <div class="title">Existing Pets
+        </div>
+
         <table class="paybill" width="100%">
             <thead>
                 <tr>
@@ -35,9 +39,9 @@
                         <td>{{ pet.name }}</td>
                         <td>{{ pet.age }}</td>
                         <td>{{ pet.pet_type }}</td>
-                        <td>
+                        <td style="display: flex; justify-content: center;">
                             <form method="POST" action="{{ url_for('remove_pet', pet_id=pet.id) }}">
-                                <div class="sbutton"><button type="submit" class="remove-button">Remove</button></div>
+                                <div class="sbutton" ><button type="submit" >Remove</button></div>
                             </form>
                         </td>
                     </tr>
@@ -47,7 +51,7 @@
     </div>
 </div>
 
-    <footer>
+<footer style="display: flex;justify-content: center;">
         <p>&copy; {{ current_year }} Pet Management System</p>
     </footer>
     <script>

@@ -1,8 +1,3 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #ececec;
-    margin: 0;
-}
 
 *
 {
@@ -10,40 +5,72 @@ body {
     margin: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+.flexcenter
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.homep
+{
+	color: #fff;
+	overflow: hidden; 
+	border-right: .15em solid #87CEEB;
+	white-space: nowrap; 
+	margin-left: 10px;
+	letter-spacing: .1em; 
+	animation: 
+	  typing 3.5s steps(20, end) infinite,
+	  blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+	from { width: 0 }
+	to { width: 46% }
+}
+
+@keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: #87CEEB }
 }
 
 .signup
 {
  	background: url(assets/dog-photo.webp);
 	background-repeat: no-repeat;
-	background-size: cover;
-	display: flex;
-	justify-content: center;
-	align-items:center;
+    background-size: cover;
+    background-attachment: scroll;
+    width: 100%;
 	height: 100vh;
-	width: 100%;
-     
+    display: flex;
+    justify-content: center;
+    align-items: center;
 	background-attachment: scroll;
 	background-position: center;
 }
 .hero {
-    background: #000; /* Black background for the hero section */
-    color: #fff; /* White text for better contrast */
+    background: #000; 
+    color: #fff;
     width: 100%;
     max-height: 100%;
    
-    padding: 20px 0; /* Added padding for spacing */
+    padding: 20px 0; 
 }
 
 .container {
-    max-width: 700px; /* Adjusted for better responsiveness */
+    max-width: 700px; 
     width: 100%;
     background: #ffffff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease; /* Added transition for scaling effect */
-    margin: 20px auto; /* Centered with margin */
+    transition: transform 0.3s ease; 
+    margin: 20px auto; 
 }
 
 .paybill
@@ -64,11 +91,11 @@ body {
 }
 .paybill thead
 {
-	background: linear-gradient(-135deg, #e9c979, #CCBA78);
+	background-color: #87CEEB;
 }
 .paybill tbody
 {
-		border: 1px solid #CCBA78;
+		border: 1px solid #87CEEB;
 	
 }
 .paybill th 
@@ -81,7 +108,7 @@ body {
 .paybill td
 {
 	width: auto;
-	height: 10px;
+	height: auto;
 	padding: 13px;
 	text-align: center;
 	
@@ -92,22 +119,22 @@ body {
 }
 
 .container:hover {
-    transform: scale(1.02); /* Slightly scale on hover */
+    transform: scale(1.02);
 }
 
 .container .title {
     font-size: 30px;
     font-weight: 600;
-    text-align: center; /* Centered title */
+    text-align: center; 
     margin-bottom: 20px;
-    color: #CCBA78; /* Title color */
+    color: #87CEEB; 
 }
 
 h2 {
     text-align: center;
     color: #333333;
-    font-size: 1.8em; /* Subheading styling */
-    margin-bottom: 20px; /* Spacing below subheading */
+    font-size: 1.8em; 
+    margin-bottom: 20px; 
 }
 
 .user-details {
@@ -117,12 +144,12 @@ h2 {
 }
 
 .input-box {
-    margin-bottom: 20px; /* Increased spacing for better layout */
-    width: calc(100% / 2 - 10px); /* Adjusted for better alignment */
+    margin-bottom: 20px; 
+    width: calc(100% / 2 - 10px); 
 }
 
 .input-box input.form-control {
-    height: 40px; /* Consistent height for input fields */
+    height: 40px; 
     width: 100%;
     outline: none;
     border-radius: 5px;
@@ -133,7 +160,7 @@ h2 {
 }
 
 .input-box input.form-control:focus {
-    border-color: #24a1ac; /* Focus color for input */
+    border-color: #24a1ac; 
     box-shadow: 0 0 8px rgba(36, 161, 172, 0.5);
 }
 
@@ -154,7 +181,8 @@ h2 {
     border-radius: 5px;
     margin-top: 10px;
     letter-spacing: 1px;
-    background: linear-gradient(135deg, #000000, #CCBA78);
+    padding: 5px;
+    background: linear-gradient(135deg, #00bfff, #87CEEB);
 }
 
 nav {
@@ -183,34 +211,17 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #CCBA78;
+    color: #87CEEB;
     text-decoration: none;
     padding: 10px;
     cursor: pointer;
 }
 
 .button button:hover {
-    background: linear-gradient(-135deg, #000000, #CCBA78); /* Hover effect */
+    background: linear-gradient(-135deg, #000000, #87CEEB); 
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
 
-ul li {
-    background-color: #f7f7f7;
-    padding: 12px;
-    margin-bottom: 8px;
-    border-radius: 6px;
-    border-left: 4px solid #005f73;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-ul li:hover {
-    background-color: #e0fbfc;
-    transform: translateX(4px); /* Slight move effect on hover */
-}
 
 footer {
     text-align: center;
@@ -220,7 +231,7 @@ footer {
 
 .logo 
 {
-    height: 70px;
+    height: 50px;
     border-radius: 50%;
-	width: 70px;
+	width: 50px;
 }
