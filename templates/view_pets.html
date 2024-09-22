@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Existing Pets</title>
+    <link rel="stylesheet" href="../static/style.css"> <!-- Correct path to style.css -->
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            Pet List
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('pet_list') }}">View Existing Pets</a></li>
+                <li><a href="{{ url_for('add_pet') }}">Add Pet</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="signup">
+    <div class="container">
+        <h2>Existing Pets</h2>
+        <table class="paybill" width="100%">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Type</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pet in pets %}
+                    <tr>
+                        <td>{{ pet.name }}</td>
+                        <td>{{ pet.age }}</td>
+                        <td>{{ pet.pet_type }}</td>
+                        <td>
+                            <form method="POST" action="{{ url_for('remove_pet', pet_id=pet.id) }}">
+                                <div class="sbutton"><button type="submit" class="remove-button">Remove</button></div>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    <footer>
+        <p>&copy; {{ current_year }} Pet Management System</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            document.querySelector('footer p').textContent = `© ${currentYear} Pet Management System`;
+        });
+    </script>
+</body>
+</html>

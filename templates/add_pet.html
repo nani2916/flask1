@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet List</title>
+    <link rel="stylesheet" href="../static/style.css"> <!-- Correct path to style.css -->
+
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            Pet List
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('pet_list') }}">View Existing Pets</a></li>
+                <li><a href="{{ url_for('add_pet') }}">Add Pet</a></li>
+            </ul>
+        </nav>
+        
+    </div>
+    <div class="signup">
+        <div class="container">
+            <div class="title">Add Pet</div>
+            <form method="POST">
+                {{ form.hidden_tag() }}
+                <div class="user-details">
+                    <div class="input-box">
+                        {{ form.name.label(class="details") }} 
+                        {{ form.name(class="form-control", placeholder="Enter pet's name") }}
+                    </div>
+                    <div class="input-box">
+                        {{ form.age.label(class="details") }} 
+                        {{ form.age(class="form-control", placeholder="Enter pet's age") }}
+                    </div>
+                    <div class="input-box">
+                        {{ form.pet_type.label(class="details") }} 
+                        {{ form.pet_type(class="form-control", placeholder="Enter pet's type") }}
+                    </div>
+                    
+                </div>
+                <div class="sbutton">
+                    <button type="submit">{{ form.submit() }}</button>
+                </div>
+                
+                
+            </form>
+
+        </div>
+
+        
+        </div>
+        <footer>
+            <p>&copy; {{ current_year }} Pet Management System</p>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const currentYear = new Date().getFullYear();
+                document.querySelector('footer p').textContent = `© ${currentYear} Pet Management System`;
+            });
+        </script>
+    </div>
+</body>
+</html>

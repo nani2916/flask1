@@ -1,0 +1,226 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ececec;
+    margin: 0;
+}
+
+*
+{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.signup
+{
+ 	background: url(assets/dog-photo.webp);
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	height: 100vh;
+	width: 100%;
+     
+	background-attachment: scroll;
+	background-position: center;
+}
+.hero {
+    background: #000; /* Black background for the hero section */
+    color: #fff; /* White text for better contrast */
+    width: 100%;
+    max-height: 100%;
+   
+    padding: 20px 0; /* Added padding for spacing */
+}
+
+.container {
+    max-width: 700px; /* Adjusted for better responsiveness */
+    width: 100%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Added transition for scaling effect */
+    margin: 20px auto; /* Centered with margin */
+}
+
+.paybill
+{
+	border-collapse: collapse;
+	border-radius: 10px;
+	overflow: hidden;
+	
+}
+.pat
+{
+	display: flex; 
+	justify-content: flex-end; 
+	padding:10px; 
+	font-size: 18px;
+	color: red;
+	font-weight: 600;
+}
+.paybill thead
+{
+	background: linear-gradient(-135deg, #e9c979, #CCBA78);
+}
+.paybill tbody
+{
+		border: 1px solid #CCBA78;
+	
+}
+.paybill th 
+{
+	width: auto;
+	height: 10px;
+	padding: 15px;
+	text-align: center;
+}
+.paybill td
+{
+	width: auto;
+	height: 10px;
+	padding: 13px;
+	text-align: center;
+	
+}
+.paybill .ps
+{
+	width: auto;
+}
+
+.container:hover {
+    transform: scale(1.02); /* Slightly scale on hover */
+}
+
+.container .title {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center; /* Centered title */
+    margin-bottom: 20px;
+    color: #CCBA78; /* Title color */
+}
+
+h2 {
+    text-align: center;
+    color: #333333;
+    font-size: 1.8em; /* Subheading styling */
+    margin-bottom: 20px; /* Spacing below subheading */
+}
+
+.user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-box {
+    margin-bottom: 20px; /* Increased spacing for better layout */
+    width: calc(100% / 2 - 10px); /* Adjusted for better alignment */
+}
+
+.input-box input.form-control {
+    height: 40px; /* Consistent height for input fields */
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.input-box input.form-control:focus {
+    border-color: #24a1ac; /* Focus color for input */
+    box-shadow: 0 0 8px rgba(36, 161, 172, 0.5);
+}
+
+.details {
+    display: block;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.sbutton button {
+    height: 40px;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #000000, #CCBA78);
+}
+
+nav {
+    font-weight: 700;
+    background: black;
+    padding: 10px 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+nav ul {
+    width: 100%;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative; 
+}
+
+nav ul li a {
+    color: #CCBA78;
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.button button:hover {
+    background: linear-gradient(-135deg, #000000, #CCBA78); /* Hover effect */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #f7f7f7;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border-left: 4px solid #005f73;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+ul li:hover {
+    background-color: #e0fbfc;
+    transform: translateX(4px); /* Slight move effect on hover */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+}
+
+.logo 
+{
+    height: 70px;
+    border-radius: 50%;
+	width: 70px;
+}
